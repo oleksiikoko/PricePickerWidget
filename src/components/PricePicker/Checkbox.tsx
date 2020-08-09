@@ -6,12 +6,6 @@ const CheckboxContainer = styled.div`
   vertical-align: middle;
 `;
 
-const Icon = styled.svg`
-  fill: none;
-  stroke: white;
-  stroke-width: 2px;
-`;
-
 const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   border: 0;
   clip: rect(0 0 0 0);
@@ -26,21 +20,12 @@ const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
 
 const StyledCheckbox = styled.div`
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  /* background: ${(checked) => (checked ? "salmon" : "papayawhip")}; */
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 1px solid;
   border-color: ${(checked) => (checked ? "#6CA22C" : "#999999")};
   transition: all 150ms;
-
-  /* ${HiddenCheckbox}:focus + & {
-    box-shadow: 0 0 0 3px pink;
-  } */
-
-  ${Icon} {
-    visibility: ${(checked) => (checked ? "visible" : "hidden")};
-  }
 `;
 
 const Circle = styled.span`
@@ -50,15 +35,7 @@ const Circle = styled.span`
   background: #6ca22c;
   border-radius: 50%;
   transition: all 150ms;
-  margin: calc(50% - 8px/2);
-
-  /* ${HiddenCheckbox}:focus + & {
-    box-shadow: 0 0 0 3px pink;
-  }
-
-  ${Icon} {
-    visibility: ${(checked) => (checked ? "visible" : "hidden")};
-  } */
+  margin: calc(50% - 8px / 2);
 `;
 
 interface Props {

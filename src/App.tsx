@@ -1,6 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 import { PricePicker, PriceOption } from "components";
+
+const Body = styled.div`
+  font-family: "Roboto", sans-serif;
+`;
 
 class App extends React.PureComponent {
   options: Array<PriceOption>;
@@ -14,16 +19,16 @@ class App extends React.PureComponent {
         },
         by: {
           unit: "g",
-          count: 500,
+          amount: 500,
         },
       },
     ];
   }
   render() {
     return (
-      <div>
+      <Body>
         <PricePicker options={this.options} />
-      </div>
+      </Body>
     );
   }
 }

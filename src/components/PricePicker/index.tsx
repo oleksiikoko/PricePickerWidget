@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Checkbox from "./Checkbox";
+import Choice from "./Choice";
 
 const Box = styled.div`
   background: #ffffff;
@@ -32,7 +32,19 @@ export class PricePicker extends React.Component<Props> {
   render() {
     return (
       <Box>
-        <Checkbox checked={false} />
+        <Choice
+          checked={false}
+          priceOption={{
+            price: {
+              unit: "UAH",
+              amount: 500,
+            },
+            by: {
+              unit: "g",
+              amount: 500,
+            },
+          }}
+        />
       </Box>
     );
   }
